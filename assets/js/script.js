@@ -67,13 +67,21 @@ function getEdamamApi() {
 
 function getDrinks() {
 
-  const inputText = ""; // WHAT TO PUT HERE
+  const inputText = "egg";
 
   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${inputText}`;
 
-  fetch(url)
-    .then((response) => res.json())
-    .then((json) => displayDrinks(json.drinks));
+  // fetch(url)
+  //   .then((response) => res.json())
+  //   .then((json) => displayDrinks(json.drinks));
+
+  fetch(url).then((response) => {
+    return response.json();
+  }).then((json) => {
+    console.log(json)
+  }).catch((error) => {
+    console.error("Error: ", error);
+  });
 }
 
 function displayDrinks(drinks) {
