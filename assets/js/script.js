@@ -71,19 +71,60 @@ function getDrinks() {
 
   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${inputText}`;
 
-  // fetch(url)
-  //   .then((response) => res.json())
-  //   .then((json) => displayDrinks(json.drinks));
-
   fetch(url).then((response) => {
     return response.json();
   }).then((json) => {
-    console.log(json)
+
+    console.log(json);
+
+    const container = document.getElementById("drink-container");
+
+    var drinks = [];
+
+    for (var i in json)
+      drinks.push(json[i]);
+
+    drinks.forEach((data) => {
+
+      console.log("Here are my drinks! " + JSON.stringify(data));
+
+      data.forEach((drink) => {
+
+        console.log(drink);
+
+        // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
+        container.innerHTML += `
+          <div class="col-lg-4">
+            <p>${drink.strDrink}</p>
+            <img src="${drink.strDrinkThumb}" />
+          </div>`;
+      });
+    });
+
+
+    // <img src="${data.strDrinkThumb}" />
+
+
+    // displayDrinks(json);
   }).catch((error) => {
     console.error("Error: ", error);
   });
 }
 
 function displayDrinks(drinks) {
+
   console.log(drinks);
+
+  const container = document.getElementById("drink-container");
+
+
+  drinks.hits.forEach((data) => {
+
+    // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
+    container.innerHTML += `
+      <div class="col-lg-4">
+        <p>${data.strDrink}</p>
+        <img src="${data.strDrinkThumb}" />
+      </div>`;
+  });
 }

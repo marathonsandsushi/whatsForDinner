@@ -23,3 +23,7 @@ div {
   padding-right: 3px;
   padding-left: 3px;
 }
+
+.test {
+  background: red;
+}
