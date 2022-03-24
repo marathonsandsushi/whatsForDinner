@@ -17,32 +17,37 @@
       <h1>What's For Dinner?</h1>
     </header>
 
-    <div>
+    <div class="user-control-panel">
     <h2>Let your cravings be your guide to dinner and drinks!</h2>
     <h3>Just go through a few of these questions and we will curate a recipe for you. You can specify if you have any allergies. There is also a feature where you can save your favorite recipes.</h3>
   </div>
 
-    <div>
+    <div class="user-control-panel">
       <h2>What kind of food are you craving?</h2>
-<input type="text" value="Enter here" id="cravingInput" />
-<button onclick="getCravingInput()">Submit</button>
+<input type="text" placeholder="Enter here" id="cravingInput" />
+<button class="btn" onclick="getCravingInput()">Submit</button>
     </div>
 
-    <div>
+    <div class="user-control-panel">
     <!-- make dropdown -->
       <h2>Please select any allergies you have so we know what to exclude.</h2>
-      <input type="text" value="Enter here" id="allergiesInput"/>
-      <button onclick="getAllergiesInput()">Submit</button>
+      <input type="text" placeholder="Enter here" id="allergiesInput"/>
+      <button class="btn" onclick="getAllergiesInput()">Submit</button>
     </div>
 
-    <div>
+    <div class="user-control-panel">
+
         <h2>Enter cooking limit time.</h2>
-        <input type="text" value="Enter here" id="timeInput"/>
-        <button onclick="getTimeInput()">Submit</button>
+        <div class="my-input-with-submit">
+
+          <input type="text" placeholder="Enter here" id="timeInput" class="input-type-A"/>
+          <button class="btn" onclick="getTimeInput()">Submit</button>
+        </div>
+
       </div>
 
-    <div>
-      <button onclick="getRecipes()">Get Recipes</button>
+    <div class="user-control-panel">
+      <button class="btn" onclick="getRecipes()">Get Recipes</button>
     </div>
 
 

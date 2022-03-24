@@ -12,7 +12,7 @@ h2, h3 {
     color: #1E48C2;
 }
 
-div {
+.user-control-panel {
     padding-top: 50px;
     padding-right: 30px;
     padding-bottom: 50px;
@@ -20,10 +20,35 @@ div {
 }
 
 #container {
-  padding-right: 3px;
-  padding-left: 3px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
-.test {
-  background: red;
+.my-menu-item {
+
+
+}
+
+
+.btn {
+  font-size: 1.3rem;
+  background-image: linear-gradient(rgb(192, 240, 217), rgb(247, 247, 235), rgb(197, 216, 197));
+  text-decoration: none;
+  padding: 6px 5px;
+  display: block;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  border: none;
+  outline: none;
+  background-color: var(--light-dark);
+  box-shadow: 3px 3px var(--dark);
+  transform: translate(-1px, -1px);
+}
+
+.btn:hover {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  transform: translate(0, 0);
+  box-shadow: 2px 2px var(--dark);
 }

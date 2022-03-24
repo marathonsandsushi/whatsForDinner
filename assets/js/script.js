@@ -51,7 +51,7 @@ function getEdamamApi() {
     json.hits.forEach((data) => {
       // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
       container.innerHTML += `
-        <div class="col-lg-4">
+        <div class="col-lg-4 card my-menu-item">
           <p>${data.recipe.label}</p>
           <p>${data.recipe.source}</p>
           <p><a href="${data.recipe.url}">Link to recipe</a></p>
@@ -94,7 +94,7 @@ function getDrinks() {
 
         // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
         container.innerHTML += `
-          <div class="col-lg-4">
+          <div class="col-lg-4 card my-menu-item">
             <p>${drink.strDrink}</p>
             <img src="${drink.strDrinkThumb}" />
           </div>`;
