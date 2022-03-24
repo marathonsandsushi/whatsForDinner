@@ -1,6 +1,7 @@
 let foodCravingVal;
 let allergies;
 let cookingTime;
+let drinkIngredient;
 
 
 function getCravingInput() {
@@ -20,8 +21,9 @@ function getTimeInput() {
 
 function getRecipes() {
 
+  clearFoodSection();
   getEdamamApi();
-  getDrinks();
+
 }
 
 
@@ -65,9 +67,17 @@ function getEdamamApi() {
 
 }
 
+function clearFoodSection () {
+
+  document.getElementById("food-container").innerHTML = "";
+
+}
+
 function getDrinks() {
 
-  const inputText = "egg";
+  clearDrinkSection();
+
+  const inputText = document.getElementById("drink-ingredient-input").value;
 
   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${inputText}`;
 
@@ -127,4 +137,9 @@ function displayDrinks(drinks) {
         <img src="${data.strDrinkThumb}" />
       </div>`;
   });
+}
+
+function clearDrinkSection () {
+
+  document.getElementById("drink-container").innerHTML = "";
 }
