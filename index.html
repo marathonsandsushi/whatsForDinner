@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>What's For Dinner?</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>What's For Dinner?</h1>
+      <hr>
+    </header>
+    <h2>Let's find out what to eat tonight! Just go through a few of these questions and we will curate a recipe for you. You can specify if you have any allergies. There is also a feature where you can save your favorite recipes.</h2>
+
+    <div>
+      <h2>What kind of food are you craving?</h2>
+<input type="text" value="Enter here" id="cravingInput" />
+<button onclick="getCravingInput()">Submit</button>
+    </div>
+
+    <div
+    <!-- make dropdown -->
+      <h2>Please select any allergies you have so we know what to exclude.</h2>
+      <input type="text" value="Enter here" id="allergiesInput"/>
+      <button onclick="getAllergiesInput()">Submit</button>
+    </div>
+
+
+    <<div id="results-container">
+    </div>
+
+
+  </body>
+  <footer>
+
+  </footer>
+ <script src="./assets/js/script.js" charset="utf-8"></script>
+</html>
