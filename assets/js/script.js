@@ -1,5 +1,6 @@
 let foodCravingVal;
 let allergies;
+let cookingTime;
 
 
 function getCravingInput(){
@@ -10,6 +11,16 @@ function getCravingInput(){
 function getAllergiesInput(){
   allergies = document.getElementById("allergiesInput").value;
   // console.log(`inside getAllergiesInput:  ${allergies}`);
+}
+
+function getTimeInput(){
+  cookingTime = document.getElementById("timeInput").value;
+  // console.log(`inside getTimeInput:  ${cookingTime}`);
+}
+
+function getRecipes() {
+  
+  getEdamamApi();
 }
 
 
@@ -23,7 +34,13 @@ function getEdamamApi (){
   // Edamam "Recipes" Swagger Page:  https://developer.edamam.com/edamam-docs-recipe-api#/
   // See also: https://codesandbox.io/s/chd5o?file=/src/index.js
 
-    const requestUrl= `https://api.edamam.com/api/recipes/v2?type=public&beta=false&q=${foodCravingVal}&app_id=${edamamIdKey}&app_key=${edamamApiKey}&ingr=5-7&mealType=Breakfast&from=0&to=10`;
+    // construct the API call to Edamam
+    let requestUrl= `https://api.edamam.com/api/recipes/v2?type=public&beta=false&q=${foodCravingVal}&app_id=${edamamIdKey}&app_key=${edamamApiKey}`;
+    if(allergies) {
+      requestUrl += '&excluded=egg';
+    }
+    requestUrl += '&ingr=5-7&mealType=Breakfast&from=0&to=10';
+
     console.log(`requestUrl:  ${requestUrl}`);
 
     fetch(requestUrl ).then((response) => {
@@ -33,11 +50,13 @@ function getEdamamApi (){
       json.hits.forEach((data) => {
         // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
         container.innerHTML += `
+        <div class="col-lg-3">
           <p>${data.recipe.label}</p>
           <p>${data.recipe.source}</p>
           <p><a href="${data.recipe.url}">Link to recipe</a></p>
           <img src="${data.recipe.image}" />
-          <p>Cooking time: ${data.recipe.totalTime} minutes</p>`;
+          <p>Cooking time: ${data.recipe.totalTime} minutes</p>
+        </div>`;
       });
     }).catch((error) => {
       console.error("Error: ", error);

@@ -5,14 +5,19 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <title>What's For Dinner?</title>
+   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.ico">
+   <title>What's For Dinner?</title>
   </head>
   <body>
+
     <header class="header">
       <h1>What's For Dinner?</h1>
       <hr>
     </header>
+
+    <div>
     <h2>Let's find out what to eat tonight! Just go through a few of these questions and we will curate a recipe for you. You can specify if you have any allergies. There is also a feature where you can save your favorite recipes.</h2>
+  </div>
 
     <div>
       <h2>What kind of food are you craving?</h2>
@@ -20,19 +25,25 @@
 <button onclick="getCravingInput()">Submit</button>
     </div>
 
-    <div
+    <div>
     <!-- make dropdown -->
       <h2>Please select any allergies you have so we know what to exclude.</h2>
       <input type="text" value="Enter here" id="allergiesInput"/>
       <button onclick="getAllergiesInput()">Submit</button>
     </div>
 
-    <<div>
-      <button onclick="getEdamamApi()">Get Recipes</button>
+    <div>
+        <h2>Enter cooking limit time.</h2>
+        <input type="text" value="Enter here" id="timeInput"/>
+        <button onclick="getTimeInput()">Submit</button>
+      </div>
+
+    <div>
+      <button onclick="getRecipes()">Get Recipes</button>
     </div>
 
 
-    <div id="container"></div>
+    <div class="row" id="container"></div>
 
 
   </body>

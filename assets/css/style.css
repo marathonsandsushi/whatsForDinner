@@ -1,3 +1,16 @@
 .header {
 text-align: center;
+font-family: 'Times New Roman', Times, serif;
+background-image: linear-gradient(rgb(192, 240, 217), rgb(247, 247, 235), rgb(197, 216, 197));
 }
+
+h2 {
+    font-family:'Times New Roman', Times, serif;
+}
+
+div {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+  }
