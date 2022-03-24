@@ -47,11 +47,11 @@ function getEdamamApi() {
   fetch(requestUrl).then((response) => {
     return response.json();
   }).then((json) => {
-    const container = document.getElementById("container");
+    const container = document.getElementById("food-container");
     json.hits.forEach((data) => {
       // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
       container.innerHTML += `
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <p>${data.recipe.label}</p>
           <p>${data.recipe.source}</p>
           <p><a href="${data.recipe.url}">Link to recipe</a></p>

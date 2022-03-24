@@ -1,11 +1,15 @@
 .header {
 text-align: center;
-font-family: 'Times New Roman', Times, serif;
+font-family: 'avenir-light';
 background-image: linear-gradient(rgb(192, 240, 217), rgb(247, 247, 235), rgb(197, 216, 197));
+color: #1E48C2;
+  border: 3px solid orange;
+  padding-top: 25px;
 }
 
-h2 {
-    font-family:'Times New Roman', Times, serif;
+h2, h3 {
+    font-family:'avenir-light';
+    color: #1E48C2;
 }
 
 div {
@@ -13,4 +17,9 @@ div {
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 80px;
-  }
+}
+
+#container {
+  padding-right: 3px;
+  padding-left: 3px;
+}

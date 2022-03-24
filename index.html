@@ -6,17 +6,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.ico">
+   <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+    </style>
    <title>What's For Dinner?</title>
   </head>
   <body>
 
     <header class="header">
       <h1>What's For Dinner?</h1>
-      <hr>
     </header>
 
     <div>
-    <h2>Let's find out what to eat tonight! Just go through a few of these questions and we will curate a recipe for you. You can specify if you have any allergies. There is also a feature where you can save your favorite recipes.</h2>
+    <h2>Let your cravings be your guide to dinner and drinks!</h2>
+    <h3>Just go through a few of these questions and we will curate a recipe for you. You can specify if you have any allergies. There is also a feature where you can save your favorite recipes.</h3>
   </div>
 
     <div>
@@ -43,7 +46,17 @@
     </div>
 
 
-    <div class="row" id="container"></div>
+    <div class="row" id="container">
+
+      <div id="food-suggestions" class="col-lg-6">
+
+        <div class="row" id="food-container"> </div>
+      </div>
+      <div id="drink-suggestions" class="col-lg-6">
+
+        <div class="row" id="drink-container"> </div>
+      </div>
+    </div>
 
 
   </body>
