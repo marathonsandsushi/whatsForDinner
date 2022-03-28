@@ -13,6 +13,7 @@ A user friendly application that allows users to find out what to eat and drink 
 * Local Storage to track a searched allergy
 
 ## Live URL
+https://marathonsandsushi.github.io/whatsForDinner/
 
 ## Github URL
 https://github.com/marathonsandsushi/whatsForDinner
