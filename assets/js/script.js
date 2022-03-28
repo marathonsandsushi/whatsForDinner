@@ -1,8 +1,14 @@
+
 let foodCravingVal;
 let allergies;
 let cookingTime;
 let drinkIngredient;
 
+function loadPersistedData() {
+
+  allergies = localStorage.getItem("allergy");
+  document.getElementById("allergiesInput").setAttribute("value", allergies);
+}
 
 function getCravingInput() {
   foodCravingVal = document.getElementById("cravingInput").value;
@@ -12,6 +18,9 @@ function getCravingInput() {
 function getAllergiesInput() {
   allergies = document.getElementById("allergiesInput").value;
   // console.log(`inside getAllergiesInput:  ${allergies}`);
+
+  // allergy user story 1 - client side storage for 1 allergy
+  localStorage.setItem('allergy', allergies);
 }
 
 function getTimeInput() {
