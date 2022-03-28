@@ -7,7 +7,8 @@ let drinkIngredient;
 function loadPersistedData() {
 
   allergies = localStorage.getItem("allergy");
-  document.getElementById("allergiesInput").setAttribute("value", allergies);
+  if(allergies)
+    document.getElementById("allergiesInput").setAttribute("value", allergies);
 }
 
 function getCravingInput() {
@@ -133,3 +134,5 @@ function clearDrinkSection () {
 
   document.getElementById("drink-container").innerHTML = "";
 }
+
+// Madison Kendall's code
