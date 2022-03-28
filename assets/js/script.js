@@ -29,6 +29,8 @@ function getRecipes() {
 
 function getEdamamApi() {
 
+  console.log("getEdamamApi()");
+
   let edamamApiKey = "049b103b5a5a7b73695ba6fb6ad10e2d";
   let edamamIdKey = "0cf3bef7";
   // let foodType='pizza';
@@ -53,12 +55,13 @@ function getEdamamApi() {
     json.hits.forEach((data) => {
       // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
       container.innerHTML += `
-        <div class="col-lg-4 card my-menu-item">
-          <p>${data.recipe.label}</p>
-          <p>${data.recipe.source}</p>
-          <p><a href="${data.recipe.url}">Link to recipe</a></p>
+        <div class="cell small-4 card my-menu-item">
+          <p class="card-divider">${data.recipe.label}</p>
           <img src="${data.recipe.image}" />
+
+          <p>${data.recipe.source}</p>
           <p>Cooking time: ${data.recipe.totalTime} minutes</p>
+          <p><a href="${data.recipe.url}">Link to recipe</a></p>
         </div>`;
     });
   }).catch((error) => {
@@ -104,7 +107,7 @@ function getDrinks() {
 
         // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
         container.innerHTML += `
-          <div class="col-lg-4 card my-menu-item">
+          <div class="cell small-4 card my-menu-item">
             <p>${drink.strDrink}</p>
             <img src="${drink.strDrinkThumb}" />
           </div>`;
@@ -112,32 +115,8 @@ function getDrinks() {
     });
 
 
-    // <img src="${data.strDrinkThumb}" />
-
-
-    // displayDrinks(json);
   }).catch((error) => {
     console.error("Error: ", error);
-  });
-}
-
-function displayDrinks(drinks) {
-
-  console.log(drinks);
-
-  const container = document.getElementById("drink-container");
-
-
-  drinks.hits.forEach((data) => {
-
-    if(data.strDrink  )  // if no allergen
-
-    // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
-    container.innerHTML += `
-      <div class="col-lg-4">
-        <p>${data.strDrink}</p>
-        <img src="${data.strDrinkThumb}" />
-      </div>`;
   });
 }
 

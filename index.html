@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="Foundation-Sites-CSS/css/foundation.css">
   <link rel="stylesheet" href="Foundation-Sites-CSS/css/app.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.ico">
   <style>
@@ -24,20 +24,21 @@
     <h2>Let your cravings be your guide to dinner and drinks!</h2>
     <h3>Just go through a few of these questions and we will curate a recipe for you. You can specify if you have any allergies. There is also a feature where you can save your favorite recipes.</h3>
   </div>
-  <div class="row">
-    <div class="col-lg-6">
+
+  <div class="grid-x">
+    <div class="cell small-6">
 
       <div class="user-control-panel">
         <h2>What kind of food are you craving?</h2>
         <input type="text" placeholder="Enter here" id="cravingInput" />
-        <button class="btn" onclick="getCravingInput()">Submit</button>
+        <button class="btn button success" onclick="getCravingInput()">Submit</button>
       </div>
 
       <div class="user-control-panel">
         <!-- make dropdown -->
         <h2>Please select any allergies you have so we know what to exclude.</h2>
         <input type="text" placeholder="Enter here" id="allergiesInput" />
-        <button class="btn" onclick="getAllergiesInput()">Submit</button>
+        <button class="btn button success" onclick="getAllergiesInput()">Submit</button>
       </div>
 
       <div class="user-control-panel">
@@ -46,39 +47,39 @@
         <div class="my-input-with-submit">
 
           <input type="text" placeholder="Enter here" id="timeInput" class="input-type-A" />
-          <button class="btn" onclick="getTimeInput()">Submit</button>
+          <button class="btn button success" onclick="getTimeInput()">Submit</button>
         </div>
 
       </div>
 
     </div>
 
-    <div class="col-lg-6">
+    <div class="cell small-6">
 
       <div class="user-control-panel">
         <h2>Find the perfect drink</h2>
         <input type="text" placeholder="Enter ingredient here" id="drink-ingredient-input" />
-        <button class="btn" onclick="getDrinks()">Submit</button>
+        <button class="btn button success" onclick="getDrinks()">Submit</button>
       </div>
     </div>
   </div>
 
 
   <div class="user-control-panel">
-    <button class="btn" onclick="getRecipes()">Get Recipes</button>
+    <button class="btn button success" onclick="getRecipes()">Get Recipes</button>
   </div>
 
 
-  <div class="row" id="container">
+  <div class="grid-x" id="container">
 
-    <div id="food-suggestions" class="col-lg-6">
+    <div id="food-suggestions" class="cell small-6">
 
-      <div class="row" id="food-container"> </div>
+      <div class="grid-x" id="food-container"> </div>
     </div>
 
-    <div id="drink-suggestions" class="col-lg-6">
+    <div id="drink-suggestions" class="cell small-6">
 
-      <div class="row" id="drink-container"> </div>
+      <div class="grid-x" id="drink-container"> </div>
     </div>
   </div>
 
@@ -88,5 +89,10 @@
 
 </footer>
 <script src="./assets/js/script.js" charset="utf-8"></script>
+
+<script src="Foundation-Sites-CSS/js/vendor/jquery.js"></script>
+<script src="Foundation-Sites-CSS/js/vendor/what-input.js"></script>
+<script src="/Foundation-Sites-CSS/js/vendor/foundation.js"></script>
+<script src="Foundation-Sites-CSS/js/app.js"></script>
 
 </html>
