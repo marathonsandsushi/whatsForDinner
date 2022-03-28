@@ -15,5 +15,9 @@ A user friendly application that allows users to find out what to eat and drink 
 ## Live URL
 
 ## Github URL
+https://github.com/marathonsandsushi/whatsForDinner
 
 ## Screenshots
+The user enters the page
+![what'sForDinnerScreenshotOne](https://user-images.githubusercontent.com/98371322/160315346-ee898bab-1630-4d02-b235-2abc67c0d92a.png)
+
