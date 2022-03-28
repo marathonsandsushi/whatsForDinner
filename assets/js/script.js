@@ -130,6 +130,8 @@ function displayDrinks(drinks) {
 
   drinks.hits.forEach((data) => {
 
+    if(data.strDrink  )  // if no allergen
+
     // console.log(`${data.recipe.label}:  ${data.recipe.url}`);
     container.innerHTML += `
       <div class="col-lg-4">
